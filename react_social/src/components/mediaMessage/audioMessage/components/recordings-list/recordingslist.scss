@@ -1,0 +1,38 @@
+
+.recordings-container{
+    
+
+    .recordings-list {
+        flex-direction: column;
+        justify-content: center;
+      
+        .delete-button {
+          border:1px solid red;
+          border-radius: 5px;
+   
+          cursor: pointer;
+          color:red;
+          width: 100%;
+          padding:5px;
+          margin-top: 10px;
+          margin-bottom: 20px;
+          
+          &:hover{
+            color:red;
+            border-color: red;
+            background-color: red;
+          }
+        }
+      
+        .send-button {
+          @extend .delete-button;
+          border-color: green;
+          color: green;
+      
+          &:hover{
+            background-color: green;
+          }
+        }
+      }
+      
+}

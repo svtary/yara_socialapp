@@ -1,0 +1,74 @@
+.modalform{
+
+    width: 400px;
+    border-radius: 10%;
+    background-color: #FA925D;
+    position: absolute;
+    left:50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-flow: column;
+
+
+    // align-items: center;
+    .inputimag{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        .img-container{
+            display: flex;
+            margin-top: 30px;
+            border-radius: 50%;
+            border: 3px solid black;
+            width:200px;
+            height:200px;
+            img{
+                display: block;
+                border-radius: 50%;
+            }
+
+        }
+        .clickplus{
+            opacity: 0;
+
+            .inputimg{
+                cursor: pointer;
+                opacity: 0;
+            }
+            &:hover{
+                opacity: 70%;
+
+            }
+        }
+        
+
+    }
+    label{
+       
+        margin: 10px;
+        display: flex;
+        justify-content: space-between;
+        span{
+            margin: 10px;
+            
+        }
+        
+    }
+    .buttonall{
+        display: flex;
+       margin: 20px;
+        .submitbutton{
+            margin: 20px;
+            width: 80px;
+            height: 30px;
+            flex: 1;
+            // background-color: black;
+            border-radius: 10%;
+        }
+    }
+
+
+    
+}

@@ -1,0 +1,48 @@
+.controls-container{
+    .cancel-button-container {
+
+        padding: 5px;
+        margin-bottom: 10px;
+        border: 1px solid red ;
+        border-radius: 5px;
+        color: red;
+        display: flex;
+        justify-content: center;
+        cursor: pointer;
+      
+        &:hover {
+          color: red;
+          border-color: red;
+          background-color: red;
+        }
+      
+        .cancel-button {
+          flex-direction: row;
+          background-color: transparent;
+          gap: 10px;
+          align-items: center;
+          border:none;
+        }
+      }
+      
+      .start-button-container {
+        @extend .cancel-button-container;
+        flex-direction: row;
+        border: 1px solid green;
+        color: green;
+        margin-top: 10px;
+        .start-button {
+          flex-direction: row;
+          background-color: transparent;
+          gap: 10px;
+          align-items: center;
+          border:none;
+        }
+      
+        &:hover {
+          color: green;
+          border-color:green;
+          background-color: green;
+        }
+      }
+}

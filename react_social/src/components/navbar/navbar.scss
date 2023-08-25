@@ -1,0 +1,117 @@
+@import "../../style.scss";
+.navbar{
+    @include themify($themes){
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    height: 50px;
+    // border-bottom: 1px solid themed("border");
+    position: sticky;
+    top: 0;
+    background-color: themed("bg");
+    color: themed("textColor");
+    z-index: 999;
+    .left{
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        span{
+            font-weight: bold;
+            font-size: 20px;
+            color:themed("logo");
+      
+        }
+        .search{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border: 1px solid themed("border");
+            border-radius: 5px;
+            padding: 5px;
+            input{
+                border: none;
+                width: 500px;
+                background-color: transparent;
+                color: themed("textColor");
+
+                @include mobile{
+                    display: none;
+                }
+                @include tablet{
+                    width: 200px;
+                }
+            }
+        }
+
+    }
+    .right{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        @include mobile{
+            display: none;
+        }
+        a:-webkit-any-link {
+            color:themed("textColor") ;
+            cursor: pointer;
+            text-decoration: none;
+
+        }
+
+        .user{
+            cursor: pointer;
+            position: relative;
+            display: inline-block;
+            float: left;
+            .dup{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                font-weight: 5px;
+                img{
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+                span{
+                    font-size: 20px;
+            
+
+            }
+
+            }
+            @include tablet{
+                display: none;
+            }
+            .dropbar{
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+
+                a{
+                    // padding-top: 20px;
+                    // margin: 10px 0;
+                    height: 30px;
+                    text-align: center;
+                    span{
+                        line-height: 20px;
+                        vertical-align: center;
+
+                    }
+                }
+                a:first-child{
+                    padding-top: 10px;
+                }
+                span:hover{
+                    background-color: orangered;
+
+                }
+
+            }
+        }
+    }
+}
+}
+    
